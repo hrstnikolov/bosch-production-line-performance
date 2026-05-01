@@ -2,6 +2,33 @@
 
 Trying to predict which parts will fail quality control. 
 
+
+## Setup
+
+**Virtual env**
+
+Create venv using uv.
+
+    uv sync
+
+**Data setup**
+
+Download the Bosch dataset from [Kaggle](https://www.kaggle.com/competitions/bosch-production-line-performance/data) into `data/raw/`
+
+Run `python shared/preprocess_raw.py` to generate the Parquet files in `data/processed/`
+   (takes ~10 min, requires ~16 GB RAM)
+
+**Run project**
+
+Option 1: Use an IDE
+
+Option 2: Use jupyter lab
+   
+    # activate venv
+   
+    uv run --with jupyterlab jupyter lab
+
+
 ## Initial Plan
 
 Initial plan generated with Claude.
